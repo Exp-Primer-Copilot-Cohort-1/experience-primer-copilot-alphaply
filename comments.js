@@ -104,3 +104,7 @@ app.get('/posts', function(req, res, next){
       resdb.once('open', function(){
   console.log('Connected to MongoDB');
 });
+//check for db errors
+db.on('error', function(err){
+  console.log(err);
+});
